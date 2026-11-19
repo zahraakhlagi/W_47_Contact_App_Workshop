@@ -1,5 +1,9 @@
 package lexicon.se.view;
 
+import lexicon.se.model.Contact;
+
+import java.util.List;
+
 public class ContactView {
 // --- Fields (State/Data) ---
 
