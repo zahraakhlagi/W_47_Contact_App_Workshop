@@ -63,7 +63,7 @@ public class ContactView {
         IO.println("0. Exit program");
         IO.println("========================================================");
     } // Method 'displayMenu' end --
-/*
+
     // Method 'displayContacts':
     public static void displayContacts(List<Contact> contacts) {
         // --- Local variables (static) ---
@@ -74,7 +74,7 @@ public class ContactView {
             IO.println(contact);
         }
     } // Method 'displayContacts' end --
-*/
+
     // Method 'displayMessage':
     public static void displayMessage(String message) {
         // --- Local variables (static) ---
