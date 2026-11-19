@@ -42,17 +42,16 @@ public class ContactView {
 
 // --- Methods ---
     // Method 'getUserInput':
-    public static String getUserInput(String prompt) {
+    public String getUserInput(String prompt) {
         // --- Local variables (static) ---
 
 
         // --- Body (Actions) ---
-        IO.print("Select option: ");
         return IO.readln(prompt);
     } // Method 'getUserInput' end --
 
     // Method 'displayMenu':
-    public static void displayMenu() {
+    public void displayMenu() {
         // --- Local variables (static) ---
 
 
@@ -63,13 +62,12 @@ public class ContactView {
         IO.println("1. Contact view");
         IO.println("2. Find contact");
         IO.println("3. Add contact");
-        IO.println("4. Delete contact");
         IO.println("0. Exit program");
         IO.println("========================================================");
     } // Method 'displayMenu' end --
 
     // Method 'displayContacts':
-    public static void displayContacts(List<Contact> contacts) {
+    public void displayContacts(List<Contact> contacts) {
         // --- Local variables (static) ---
 
 
@@ -80,7 +78,7 @@ public class ContactView {
     } // Method 'displayContacts' end --
 
     // Method 'displayMessage':
-    public static void displayMessage(String message) {
+    public void displayMessage(String message) {
         // --- Local variables (static) ---
 
 
@@ -89,7 +87,7 @@ public class ContactView {
     } // Method 'displayMessage' end --
 
     // Method 'displayError':
-    public static void displayError(String message) {
+    public void displayError(String message) {
         // --- Local variables (static) ---
 
 
@@ -98,7 +96,7 @@ public class ContactView {
     } // Method 'displayError' end --
 
     // Method 'methodName':
-    public static void methodName() {
+    public void methodName() {
         // --- Local variables (static) ---
 
 
