@@ -1,5 +1,7 @@
 package lexicon.se;
 
+import lexicon.se.model.Contact;
+
 import java.util.List;
 
 public interface ContactDAO {
