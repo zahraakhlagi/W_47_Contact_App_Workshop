@@ -1,6 +1,6 @@
 package lexicon.se.controller;
 
-import lexicon.se.ContactDAO;
+import lexicon.se.data.ContactDAO;
 import lexicon.se.model.Contact;
 import lexicon.se.view.ContactView;
 
@@ -61,7 +61,7 @@ public class ContactController {
         if (contact == null) {
             contactView.displayMessage("No contact found with name '" + name + "'.");
         } else {
-            contactView.displayMessage(contact.toString());
+            contactView.displayMessage(contact.getName() + ", " + contact.getPhoneNumber());
         }
     }
 }

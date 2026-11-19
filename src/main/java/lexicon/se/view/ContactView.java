@@ -73,7 +73,7 @@ public class ContactView {
 
         // --- Body (Actions) ---
         for(Contact contact : contacts) {
-            IO.println(contact);
+            IO.println(contact.getName() + ", " + contact.getPhoneNumber());
         }
     } // Method 'displayContacts' end --
 
@@ -83,7 +83,7 @@ public class ContactView {
 
 
         // --- Body (Actions) ---
-        IO.println("Message: " + message);
+        IO.println(message);
     } // Method 'displayMessage' end --
 
     // Method 'displayError':
@@ -92,7 +92,7 @@ public class ContactView {
 
 
         // --- Body (Actions) ---
-        IO.println("Error message: " + message);
+        IO.println("Error: " + message);
     } // Method 'displayError' end --
 
     // Method 'methodName':
