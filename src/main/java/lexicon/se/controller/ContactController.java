@@ -1,5 +1,7 @@
 package lexicon.se.controller;
 
+import lexicon.se.dao.ContactDAO;
+
 public class ContactController {
 
     private final ContactDAO contactDAO;
