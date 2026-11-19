@@ -3,6 +3,8 @@ package lexicon.se.data;
 
 import lexicon.se.model.Contact;
 
+import lexicon.se.model.Contact;
+
 import java.util.List;
 
 public interface ContactDAO {

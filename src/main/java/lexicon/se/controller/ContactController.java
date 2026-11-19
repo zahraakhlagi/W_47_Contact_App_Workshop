@@ -1,6 +1,8 @@
 package lexicon.se.controller;
 
-import lexicon.se.dao.ContactDAO;
+import lexicon.se.ContactDAO;
+import lexicon.se.model.Contact;
+import lexicon.se.view.ContactView;
 
 public class ContactController {
 
