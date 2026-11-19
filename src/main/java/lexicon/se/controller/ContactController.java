@@ -37,7 +37,7 @@ public class ContactController {
                     default -> contactView.displayMessage("Unknown option, please try again.");
                 }
             } catch (Exception e) {
-                contactView.displayMessage(e.getMessage());
+                contactView.displayError(e.getMessage());
             }
         }
         contactView.displayMessage("Goodbye!");
@@ -58,7 +58,7 @@ public class ContactController {
         Contact contact = contactDAO.findByName(name);
         
         if (contact == null) {
-            contactView.displayMessage("No contact found with name '" + name + "'.");
+            contactView.displayError("No contact found with name '" + name + "'.");
         } else {
             contactView.displayMessage(contact.getName() + ", " + contact.getPhoneNumber());
         }
