@@ -2,10 +2,6 @@ package lexicon.se.view;
 
 public class ContactView {
 // --- Fields (State/Data) ---
-    // --- Static Fields ---
-
-
-    // --- Instance Fields ---
 
 
 // --- Body (Actions) ---
@@ -42,24 +38,59 @@ public class ContactView {
 
 // --- Methods ---
     // Method 'getUserInput':
-    static void getUserInput() {
+    static String getUserInput(String prompt) {
         // --- Local variables (static) ---
 
 
         // --- Body (Actions) ---
-
-
+        return IO.readln("Select option: ");
     } // Method 'getUserInput' end --
 
     // Method 'displayMenu':
-    static void displayMenu() {
+    public static void displayMenu() {
         // --- Local variables (static) ---
 
 
         // --- Body (Actions) ---
-
-
+        IO.println("========================================================");
+        IO.println("                   Contact Application");
+        IO.println("========================================================");
+        IO.println("1. Contact view");
+        IO.println("2. Find contact");
+        IO.println("3. Add contact");
+        IO.println("4. Delete contact");
+        IO.println("0. Exit program");
+        IO.println("========================================================");
     } // Method 'displayMenu' end --
+
+    // Method 'displayContacts':
+    static void displayContacts(List<Contact> contacts) {
+        // --- Local variables (static) ---
+
+
+        // --- Body (Actions) ---
+        for(Contact contact : contacts) {
+            IO.println(contact);
+        }
+    } // Method 'displayContacts' end --
+
+    // Method 'displayMessage':
+    static void displayMessage(String message) {
+        // --- Local variables (static) ---
+
+
+        // --- Body (Actions) ---
+        IO.println("Message: " + message);
+    } // Method 'displayMessage' end --
+
+    // Method 'displayError':
+    static void displayError(String message) {
+        // --- Local variables (static) ---
+
+
+        // --- Body (Actions) ---
+        IO.println("Error message: " + message);
+    } // Method 'displayError' end --
 
     // Method 'methodName':
     static void methodName() {
