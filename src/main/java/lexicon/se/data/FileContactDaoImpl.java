@@ -5,6 +5,7 @@ import lexicon.se.temporary.Contact;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 //TODO add implement interface
 public class FileContactDaoImpl {
@@ -25,7 +26,19 @@ public class FileContactDaoImpl {
 
     public Contact findByName(String name)
     {
-        return null;
+        Optional<Contact> result = findAll().stream()
+                .filter(c -> c.getName()
+                        .equals(name)).findFirst();
+        if(result.isEmpty())
+        {
+            //TODO handle? Throw an exception probably
+            return null;
+        }
+        return result.get();
     }
+
+
+
+
 
 }
