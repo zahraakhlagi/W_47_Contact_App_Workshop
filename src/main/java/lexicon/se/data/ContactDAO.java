@@ -1,4 +1,6 @@
-package lexicon.se;
+package lexicon.se.data;
+
+import lexicon.se.temporary.Contact;
 
 import java.util.List;
 

@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Optional;
 
 //TODO add implement interface
-public class FileContactDaoImpl {
+public class FileContactDaoImpl implements ContactDAO {
 
     private Path filePath;
     //TODO implement using files instead. Remove this temporary storage?
