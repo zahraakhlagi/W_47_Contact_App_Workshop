@@ -38,7 +38,7 @@ public class ContactView {
 
 // --- Methods ---
     // Method 'getUserInput':
-    static String getUserInput(String prompt) {
+    public static String getUserInput(String prompt) {
         // --- Local variables (static) ---
 
 
@@ -64,7 +64,7 @@ public class ContactView {
     } // Method 'displayMenu' end --
 
     // Method 'displayContacts':
-    static void displayContacts(List<Contact> contacts) {
+    public static void displayContacts(List<Contact> contacts) {
         // --- Local variables (static) ---
 
 
@@ -75,7 +75,7 @@ public class ContactView {
     } // Method 'displayContacts' end --
 
     // Method 'displayMessage':
-    static void displayMessage(String message) {
+    public static void displayMessage(String message) {
         // --- Local variables (static) ---
 
 
@@ -84,7 +84,7 @@ public class ContactView {
     } // Method 'displayMessage' end --
 
     // Method 'displayError':
-    static void displayError(String message) {
+    public static void displayError(String message) {
         // --- Local variables (static) ---
 
 
@@ -93,7 +93,7 @@ public class ContactView {
     } // Method 'displayError' end --
 
     // Method 'methodName':
-    static void methodName() {
+    public static void methodName() {
         // --- Local variables (static) ---
 
 
