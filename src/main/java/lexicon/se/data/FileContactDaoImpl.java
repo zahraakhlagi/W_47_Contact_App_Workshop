@@ -23,6 +23,7 @@ public class FileContactDaoImpl implements ContactDAO {
     public void save(Contact contact)
     {
         contactList.add(contact);
+        boolean duplicate = contactList.stream().anyMatch(c -> c.getName().equals(contact.getName()));
     }
 
     public Contact findByName(String name)
