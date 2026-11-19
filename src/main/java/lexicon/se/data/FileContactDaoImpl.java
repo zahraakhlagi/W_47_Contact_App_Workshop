@@ -1,6 +1,7 @@
 package lexicon.se.data;
 
-import lexicon.se.temporary.Contact;
+
+import lexicon.se.model.Contact;
 
 import java.nio.file.Path;
 import java.util.ArrayList;
