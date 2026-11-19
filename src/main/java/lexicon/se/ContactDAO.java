@@ -1,4 +1,4 @@
-package lexicon.se.dao;
+package lexicon.se;
 
 import java.util.List;
 
