@@ -1,12 +1,14 @@
 package lexicon.se.data;
 
 
+import lexicon.se.exception.DuplicateContactException;
 import lexicon.se.model.Contact;
 
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+
 
 //TODO add implement interface
 public class FileContactDaoImpl implements ContactDAO {
@@ -20,10 +22,18 @@ public class FileContactDaoImpl implements ContactDAO {
         return contactList;
     }
 
-    public void save(Contact contact)
-    {
-        contactList.add(contact);
+    public void save(Contact contact) throws DuplicateContactException {
+        if(contact == null)
+        {
+            throw new IllegalArgumentException("Cannot add a null contact");
+        }
+
         boolean duplicate = contactList.stream().anyMatch(c -> c.getName().equals(contact.getName()));
+        if(duplicate)
+        {
+            throw new DuplicateContactException("Cannot add duplicate contacts");
+        }
+        contactList.add(contact);
     }
 
     public Contact findByName(String name)
