@@ -37,7 +37,7 @@ public class ContactController {
                     default -> contactView.displayMessage("Unknown option, please try again.");
                 }
             } catch (Exception e) {
-               // ExceptionHandler.handle(e, contactView);
+                contactView.displayMessage(e.getMessage());
             }
         }
         contactView.displayMessage("Goodbye!");
@@ -47,7 +47,6 @@ public class ContactController {
         String name = contactView.getUserInput("Name: ");
         String phoneNumber = contactView.getUserInput("Phone number (10 digits): ");
 
-        //Todo:: contact validation 
          Contact contact = new Contact(name, phoneNumber);
              
         contactDAO.save(contact);
