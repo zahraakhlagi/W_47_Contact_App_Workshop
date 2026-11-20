@@ -5,8 +5,6 @@ import lexicon.se.exception.ContactStorageException;
 import lexicon.se.exception.DuplicateContactException;
 import lexicon.se.model.Contact;
 
-import lexicon.se.model.Contact;
-
 import java.util.List;
 
 public interface ContactDAO {
