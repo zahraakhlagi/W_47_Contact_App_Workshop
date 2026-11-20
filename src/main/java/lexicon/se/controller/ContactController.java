@@ -1,6 +1,8 @@
 package lexicon.se.controller;
 
 import lexicon.se.data.ContactDAO;
+import lexicon.se.exception.DuplicateContactException;
+import lexicon.se.exception.ExceptionHandler;
 import lexicon.se.model.Contact;
 import lexicon.se.view.ContactView;
 
@@ -37,13 +39,13 @@ public class ContactController {
                     default -> contactView.displayMessage("Unknown option, please try again.");
                 }
             } catch (Exception e) {
-                contactView.displayError(e.getMessage());
+                ExceptionHandler.handle(e, contactView);
             }
         }
         contactView.displayMessage("Goodbye!");
     }
     
-    private void addContact() {
+    private void addContact() throws DuplicateContactException {
         String name = contactView.getUserInput("Name: ");
         String phoneNumber = contactView.getUserInput("Phone number (10 digits): ");
 
