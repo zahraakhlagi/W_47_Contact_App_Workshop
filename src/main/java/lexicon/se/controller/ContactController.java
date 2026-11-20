@@ -1,6 +1,7 @@
 package lexicon.se.controller;
 
 import lexicon.se.data.ContactDAO;
+import lexicon.se.exception.ContactStorageException;
 import lexicon.se.exception.DuplicateContactException;
 import lexicon.se.exception.ExceptionHandler;
 import lexicon.se.model.Contact;
@@ -45,7 +46,7 @@ public class ContactController {
         contactView.displayMessage("Goodbye!");
     }
     
-    private void addContact() throws DuplicateContactException {
+    private void addContact() throws DuplicateContactException, ContactStorageException {
         String name = contactView.getUserInput("Name: ");
         String phoneNumber = contactView.getUserInput("Phone number (10 digits): ");
 
